@@ -1,0 +1,199 @@
+/* Do not change any line marked -keep- */
+
+html {
+    font-size: 100%; /* keep */
+    box-sizing: border-box; /* keep */
+}
+* {
+    box-sizing: inherit; /* keep */
+}
+body {
+    font-family: 'Libre Franklin', 'Arial', sans-serif;
+    background: #5598b2;
+    /* keep */
+    color: #333; /* keep */
+    margin: 0; /* keep */
+}
+h1, h2 {
+    font-family: 'Libre Baskerville', 'Helvetica Neue', serif;
+}
+#tagline {
+    font-style: italic;
+}
+/* all images will stretch to fill their containing element */
+img {
+    display: block; /* keep */
+    width: 100%; /* keep */
+}
+
+/* In the grid container below, you will change the columns,
+    the rows, and the AREAS to layout the page as instructed
+    in the assignment. After it matches the wide example, you will
+    write a media query with CSS rules to change the
+    layout to match the phone layout example.
+    */
+
+/* grid container */
+#container {
+    max-width: 1280px; /* keep */
+    margin: auto; /* keep */
+    display: grid; /* keep */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:
+        "header header header header header"
+        "pairing pairing pairing arial georgia"
+        "bobwhite-quail bobwhite-quail readability readability readability"
+        "bobwhite-quail bobwhite-quail line-length line-length line-length "
+        "typeface typeface typeface helvetica helvetica"
+        "typeface typeface typeface . ."
+        "footer footer footer footer footer";
+}
+
+
+/* all grid items -
+    these are the 10 direct children of the container
+    - all the grid items are here already!
+    You may add lines as needed. Do not change any line marked -keep-
+    */
+
+h1{
+  text-align: center;
+}
+
+#tagline {
+  text-align: center;
+}
+
+header {
+    grid-area: header; /* keep */
+    background: #fff; /* keep */
+}
+#arial {
+    grid-area: arial; /* keep */
+    background: #a8e8ff; /* keep */
+    padding: 2.5rem;
+    padding-right: .5rem;
+}
+#georgia {
+    grid-area: georgia; /* keep */
+    background: #a8e8ff; /* keep */
+    padding: 2.5rem;
+    padding-right: .5rem;
+}
+#pairing {
+    grid-area: pairing; /* keep */
+    background: #a8e8ff; /* keep */
+    padding: 2rem;
+    margin: 0;
+    font-size: 18pt;
+    text-align: left;
+}
+#bobwhite-quail {
+    grid-area: bobwhite-quail; /* keep */
+    background: #d2f4ff; /* keep */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem
+}
+#readability {
+    grid-area: readability; /* keep */
+    background: #d2f4ff; /* keep */
+    padding-top: 5rem;
+    padding-left: 2rem
+}
+#line-length {
+    grid-area: line-length; /* keep */
+    background: #d2f4ff; /* keep */
+    padding: 2rem;
+
+}
+#helvetica {
+    grid-area: helvetica; /* keep */
+    background: #fff; /* keep */
+    margin-top: 2rem;
+    padding: 2rem;
+    margin-right: 4rem;
+}
+#typeface {
+    grid-area: typeface; /* keep */
+    color: #d2f4ff; /* keep */
+    background: #5598b2; /* keep */
+    text-shadow: 1px 1px #000;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+footer {
+    grid-area: footer; /* keep */
+    background: #b2988a; /* keep */
+}
+
+/* end of all 10 grid items */
+
+
+/* pseudo classes */
+a {
+    color: #7c6a60; /* keep */
+}
+a:hover {
+    color: #f4cdb7; /* keep */
+    text-decoration: none; /* keep */
+}
+
+/* media queries below - only 1 is needed */
+
+@media screen and (max-width:485px){
+  article{
+    margin: 1rem;
+  }
+
+h1{
+  padding: 1rem
+}
+
+#container{
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(9, auto);
+  grid-template-areas:
+  "header header"
+  "arial georgia"
+  "pairing pairing"
+  "bobwhite-quail bobwhite-quail"
+  "readability readability"
+  "line-length line-length"
+  "helvetica helvetica"
+  "typeface typeface"
+  "footer footer";
+}
+
+{
+}
+#bobwhite-quail{
+  padding: 1rem;
+}
+
+#readability{
+  padding: 1rem;
+}
+
+#line-length{
+  padding: 1rem;
+  padding-top: .5rem;
+}
+
+#helvetica{
+  padding: 1rem;
+  margin: 0;
+}
+
+#typeface{
+  padding: 1rem;
+}
+
+#footer{
+  padding: 1rem;
+}
+
+}
